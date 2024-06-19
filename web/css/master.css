@@ -1,0 +1,62 @@
+.list_cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.navbar{
+    background-color:darkcyan !important;
+}
+@keyframes invalid {
+    0%{
+        transform: translateX(0%);
+    }
+    35%{
+        transform: translateX(10%);
+    }
+    75%{
+        transform: translateX(-10%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes feedback {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes valid {
+    0%{
+        box-shadow: none;
+    }
+    35%{
+        box-shadow: 0px 0px 5px greenyellow;
+    }
+    75%{
+        box-shadow: 0px 0px 10px green;    
+    }
+    100%{
+        box-shadow: none;
+    }
+}
+
+.form-control.is-invalid{
+    animation: 1 invalid 0.7s;
+}
+.form-control.is-valid{
+    animation: 3 valid 0.5s;
+}
+.invalid-feedback{
+    animation: 1 feedback 0.7s;
+}
+body{
+    animation: 1 feedback 0.7s;
+}
+@media screen and (max-width: 767px) {
+    .list_cards{
+        justify-content: center;
+    }
+  }
